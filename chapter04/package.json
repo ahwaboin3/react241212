@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@react-spring/core": "^9.7.5",
+    "@react-spring/web": "^9.7.5",
+    "react-spring": "^9.7.5"
+  }
+}
