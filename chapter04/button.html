@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- button.html -->
+     <h1 id="h101">안녕하세요!</h1>
+     <h1 id="h102">안녕하세요!</h1>
+     <h1 id="h103">강사 페이지</h1>
+     <button id="b01">인사말 바꾸기</button>
+<script>
+    const h101=document.querySelector("#h101")
+    const b01=document.querySelector("#b01")
+    b01.addEventListener("click",()=>{
+        h101.textContent="반갑습니다!"
+    })
+</script>
+</body>
+</html>
