@@ -17,12 +17,15 @@ import Header from './component/Header';
 //컴포넌트를 페이지에 렌더링 하기
 //Header컴포넌트를 페이지에 렌더링하려면 App에서 이 컴포넌트를 자식 요소로 배치해야 합니다. App처럼 다른 컴포넌트를 return문 내부에서 포함하는 컴포넌트를 부모 컴포넌트라고 합니다. 반대로 Header처럼 App의 return문에 포함된 컴포넌트를 자식 컴포넌트라고 합니다.
 import Body from './component/Body';
+import Footer from './component/Footer';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Body />
+      <Footer />
+      <Footer />
     </div>
   );
 }
