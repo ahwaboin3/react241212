@@ -1,6 +1,8 @@
 import './App.css'
 import Body from './component/Body'
 import Body2 from './component/Body2'
+import Body3 from './component/Body3'
+import ChildComp from './component/ChildComp'
 
 //컴포넌트에 값 전달하기
 //리액트 앱을 만들다 보면 컴포넌트가 다른 컴포넌트에 값을 전달해야 하는 상황이 생깁니다.
@@ -23,16 +25,26 @@ function App() {
   console.log("구조 분해 할당",c,d)
 
   //스프레드 연산자로 여러 개의 값 쉽게 전달하기
+
+  //기본값 설정하기
   const BodyProps={
-    "name":"리액트",
-    "age":11
+    name:"리액트",
+    age:11,
+    //skills:["html","css","javascript"],
   }
 
   const name="리액트"
   const name1="JSX"
+
+  //Props로 컴포넌트 전달하기
+  //Props로는 자바스크립트 값뿐만 아니라 컴포넌트도 전달할 수 있습니다. 
+  //리액트에서는 자식 컴포넌트에 또 다른 컴포넌트를 배치하면, 배치된 컴포넌트는 자동으로 Props의 children프로퍼티에 저장되어 전달됩니다.
   return (
     <div className="App">
-      <Body2 {...BodyProps}/>
+      <Body3>
+        <ChildComp />
+      </Body3>
+      <Body2 {...BodyProps} />
       <Body2 name={BodyProps.name} age={BodyProps.age}/>
       <Body2 name={name} age={10+1}/>
       <Body name={name} age={11}/>
