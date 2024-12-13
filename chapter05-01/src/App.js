@@ -45,8 +45,8 @@ function App() {
         <ChildComp />
       </Body3>
       <Body2 {...BodyProps} />
-      <Body2 name={BodyProps.name} age={BodyProps.age}/>
-      <Body2 name={name} age={10+1}/>
+      {/* <Body2 name={BodyProps.name} age={BodyProps.age}/>
+      <Body2 name={name} age={10+1}/> */}
       <Body name={name} age={11}/>
       <Body name={name1} age={11}/>
     </div>
