@@ -1,4 +1,5 @@
 //component/Body.js
+import React from 'react';
 //JSX와 자바스크립트 표현식
 //표현식이란 값으로 평가되는 식입니다. 즉, 10+20 같은 식은 결국 30으로 평가되기 때문에 표현식이라고 합니다. JSX는 자바스크립트 표현식을 html태그와 함께 사용할 수 있어 가독성 잇는 코드를 작성할 수 있습니다.
 function Body(){
@@ -36,19 +37,44 @@ function Body(){
     //최상위 태그 규칙
     //JSX가 반환하는 모든 태그는 반드시 최상위 태그로 감싸야 합니다.
     //retrun문 안에 최상위 태그가 한개만 존재해야 합니다.
+    //html 태그를 최상위 태그로 사용하지 않으려면, <React.Fragment>태그를 사용하면 됩니다. 이 태그로 다른 태그를 감싸면 최상위 태그를 대체하는 효과가 있습니다. 단 페이지에서 이 태그는 렌더링되지 않습니다.
+    //<React.Fragment>대신 빈 태그 '<></>'를 사용할 수도 있습니다.
+
+    //조건부 렌더링
+    //리액트 컴포넌트가 조건식의 결과에 따라 각기 다른 값을 페이지에 렌더링하는 것을 조건부 렌더링이라고 합니다.
+    //삼항 연산자를 활용한 조건부 렌더링
+    const num=20;
+    //if 조건문은 표현식에 해당하지 않기 때문에 JSX와 함께 사용할 수 없지만, 표현식인 삼항 연산자를 이용하면 조건에 따라 다른 값을 렌더링할 수 있습니다.
+    
+    //조건문을 이용한 조건부 렌더링
+    if(num%2===0){
+        return <div>{num}은 짝수입니다.</div>
+    }else{
+        return <div>{num}은 홀수입니다.</div>
+    }
     return (
-        <div></div>
-        <div>
-            <img src="https://images.velog.io/images/jeromecheon/post/6d52fa92-63f6-4991-a612-ccd6d74a27dc/1111.png" alt="react" />
-            {/* <h1>Body1 */}
-            <h2>{objA.a} {objA.b}</h2>
-            {/* <h2>{objA}</h2> */}
-            <h2>{String(boolA||boolB)}</h2>
-            <h2>{boolA||boolB}</h2>
-            <h1>body</h1>
-            <h2>{numA+numB}</h2>
-            <h2>{strA+strB}</h2>
-        </div>
+        <>
+            <h2>
+                {num}은 {num%2===0?"짝수":"홀수"}입니다.
+            </h2>
+        {/* <React.Fragment> */}
+            <div></div>
+            <div>
+                <div></div>
+                <div>
+                    <img src="https://images.velog.io/images/jeromecheon/post/6d52fa92-63f6-4991-a612-ccd6d74a27dc/1111.png" alt="react" width="300" />
+                    {/* <h1>Body1 */}
+                    <h2>{objA.a} {objA.b}</h2>
+                    {/* <h2>{objA}</h2> */}
+                    <h2>{String(boolA||boolB)}</h2>
+                    <h2>{boolA||boolB}</h2>
+                    <h1>body</h1>
+                    <h2>{numA+numB}</h2>
+                    <h2>{strA+strB}</h2>
+                </div>
+            </div>
+        {/* </React.Fragment> */}
+        </>
     )
 }
 export default Body;
