@@ -22,10 +22,18 @@ function App() {
   const {c,d}={c:1,d:2}
   console.log("구조 분해 할당",c,d)
 
+  //스프레드 연산자로 여러 개의 값 쉽게 전달하기
+  const BodyProps={
+    "name":"리액트",
+    "age":11
+  }
+
   const name="리액트"
   const name1="JSX"
   return (
     <div className="App">
+      <Body2 {...BodyProps}/>
+      <Body2 name={BodyProps.name} age={BodyProps.age}/>
       <Body2 name={name} age={10+1}/>
       <Body name={name} age={11}/>
       <Body name={name1} age={11}/>
