@@ -1,6 +1,7 @@
 import './App.css';
 import Body from './component/Body';
 import EventObj from './component/EventObj';
+import StateComp from './component/StateComp';
 
 // 이벤트 처리하기
 // 이벤트란 웹 페이지에서 일어나는 사용자의 행위입니다.
@@ -24,6 +25,7 @@ function App() {
     <div className="App">
       <Body />
       <EventObj />
+      <StateComp />
     </div>
   );
 }
