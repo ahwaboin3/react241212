@@ -11,6 +11,18 @@ function ManyInput(){
         }
         console.log(inputValue)
     }
+    //객체에서 키값에 대괄호를 넣는 이유
+    //name자체가 키값이 됩니다.
+    let obj={
+        name:"react"
+    }
+    console.log(obj)
+    //name 변수의 값이 키값이 됩니다.
+    const name="framework"
+    let obj2={
+        [name]:"react"
+    }
+    console.log(obj2)
     return (
         <div>
             <div>

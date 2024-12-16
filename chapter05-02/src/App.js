@@ -4,6 +4,7 @@ import EventObj from './component/EventObj';
 import InputManage from './component/InputManage';
 import ManyInput from './component/ManyInput';
 import PropsState from './component/PropsState';
+import RefHook from './component/RefHook';
 import StateComp from './component/StateComp';
 
 // 이벤트 처리하기
@@ -26,6 +27,7 @@ import StateComp from './component/StateComp';
 function App() {
   return (
     <div className="App">
+      <RefHook />
       <PropsState />
       <ManyInput />
       <InputManage />
