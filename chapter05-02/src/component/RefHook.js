@@ -27,7 +27,7 @@ function RefHook(){
     }
     return (
         <div>
-            <input ref={textRef} value={text} onChange={handleOnChange} />
+            <input ref={textRef} onChange={handleOnChange} />
             <button onClick={handleOnClick}>작성 완료</button>
             <h1>{text1}</h1>
             <input id="i1" value={text1} onChange={handleOnChange1} />
