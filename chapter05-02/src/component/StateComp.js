@@ -10,9 +10,12 @@
 
 //set 함수로 State값 변경하기
 
+//set 함수를 호출해 State값을 변경하면, 변경값을 페이지에 반영하기 위해 컴포넌트를 다시 렌더링합니다. 리액트에서는 이것을 컴포넌트의 업데이트라고 표현합니다. 컴포넌트가 페이지에 렌더링하는 값은 컴포넌트 함수의 반환값입니다. 따라서 컴포넌트를 다시 렌더링한다고 함은 컴포넌트 함수를 다시 호출한다는 의미와 같습니다.
+
 import { useState } from "react"
 
 function StateComp(){
+    console.log("Update!")
     const [count,setCount]=useState(0)
 
     function onIncrease(){

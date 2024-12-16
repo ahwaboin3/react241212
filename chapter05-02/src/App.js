@@ -1,6 +1,9 @@
 import './App.css';
 import Body from './component/Body';
 import EventObj from './component/EventObj';
+import InputManage from './component/InputManage';
+import ManyInput from './component/ManyInput';
+import PropsState from './component/PropsState';
 import StateComp from './component/StateComp';
 
 // 이벤트 처리하기
@@ -23,6 +26,9 @@ import StateComp from './component/StateComp';
 function App() {
   return (
     <div className="App">
+      <PropsState />
+      <ManyInput />
+      <InputManage />
       <Body />
       <EventObj />
       <StateComp />
