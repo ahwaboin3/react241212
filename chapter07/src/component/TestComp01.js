@@ -8,6 +8,8 @@ import { useReducer } from "react"
 //useReducer는 함수는 reducer를 이용해 상태 변화 코드를 컴포넌트 외부로 분리합니다.
 function reducer(state,action){
     switch(action.type){
+        case "INIT":
+            return 0
         case "INCREASE":
             return state+action.data
         case "DECREASE":
@@ -30,6 +32,7 @@ function TestComp(){
             <div>
                 <button onClick={()=>dispatch({type:"INCREASE",data:1})}>+</button>
                 <button onClick={()=>dispatch({type:"DECREASE",data:1})}>-</button>
+                <button onClick={()=>dispatch({type:"INIT"})}>0으로 초기화</button>
             </div>
         </div>
     )
