@@ -1,6 +1,10 @@
 import "./TodoItem.css";
 
+/* TodoItem 컴포넌트 리렌더 방지하기
+
+*/
 const TodoItem = ({ id, content, isDone, createdDate, onUpdate, onDelete }) => {
+  console.log(`${id} TodoItem 업데이트`)
   const onChangeCheckbox = () => {
     onUpdate(id);
   };

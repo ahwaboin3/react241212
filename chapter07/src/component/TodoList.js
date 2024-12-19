@@ -38,7 +38,6 @@ const TodoList = ({ todo, onUpdate, onDelete }) => {
   //callback - 콜백 함수 , deps - 의존성 배열
   //의존성 배열에 담긴 값이 바뀌면 콜백 함수를 다시 실행하고 결괏값을 반환합니다.
   const analyzeTodo=useMemo(()=>{
-    console.log("analyzeTodo 함수 호출")
     const totalCount=todo.length
     const doneCount=todo.filter((it)=>it.isDone).length
     const notDoneCount=totalCount-doneCount
